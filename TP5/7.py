@@ -3,6 +3,14 @@ número invertido. Tener en cuenta que el número puede ser negativo. Por ejempl
 si se ingresa 1234 debe mostrar 4321."""
 
 numero = int(input("Leer numero entero"))
+n=10
+digitos=1
+resto=numero
+while numero%n != numero:
 
-for numero in range (numero-1,numero,-1):
-    print(numero)
+    print(resto%10)
+    n = n * 10
+    digitos+=1
+    resto=resto//10
+print(resto % 10)
+
