@@ -8,9 +8,18 @@ dentro del número, comenzando desde la derecha con la posición 0. Todos
 estos resultados se suman para obtener el valor final. Ejemplo: Convertir
 1011 a decimal:
 13 02 11 10 = 1 * 23 + 0 * 22 + 1 * 21 + 1 * 20 = 11"""
-print("EJERCICIO 12 :")
-binario=("ingrese numero binario como un solo número entero de cuatro dígitos: ")
 
-for binario in range (0,4):
-    binario=0
-    binario+=1
+print("EJERCICIO 12 :")
+
+
+numero_binario=int(input("Ingrese numero binario de 4 cifras"))
+
+b4 = (numero_binario//1000)*2**3
+resto = numero_binario % 1000
+b3 = (resto // 100)*2**2
+resto = resto % 100
+b2 = (resto // 10)*2**1
+resto = resto % 10
+b1 = (resto//1)*2**0
+print(b4+b3+b2+b1)
+

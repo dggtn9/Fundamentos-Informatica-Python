@@ -1,4 +1,6 @@
-"""Ejercicio 5: Tres personas invierten dinero para fundar una empresa (no necesariamente
+"""Ejercicio 5:
+
+Tres personas invierten dinero para fundar una empresa (no necesariamente
 en partes iguales). Calcular qué porcentaje invirtió cada una."""
 print("EJERCICIO 5 :")
 persona1=float(input("Ingrese valor a invertir"))

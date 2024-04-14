@@ -58,6 +58,8 @@ la misma longitud máxima deberán mostrarse todas las que correspondan."""
 
 
 
-
+for i in range(42,177,-1):
+    if i%2!=0:
+        print(i)
 
 

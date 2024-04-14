@@ -2,9 +2,10 @@
 minutos y segundos. Por ejemplo, 200000 segundos equivalen a 2 días,
 7 horas, 33 minutos y 20 segundos."""
 print("EJERCICIO 10 :")
-segundos=int(input("Ingresa los segundos")
-dias=segundos/60*60*24
-horas=segundos/3600
+segundos=int(input("Ingresa los segundos"))
 minutos=segundos/60
+horas= minutos /60
+dias= horas/24
 
-print(dias," dias y ",horas," horas ",minutos," minutos")
+
+print(dias," dias y ",horas," horas",minutos,"minutos")
