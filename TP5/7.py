@@ -7,10 +7,13 @@ n=10
 digitos=1
 resto=numero
 while numero%n != numero:
-
-    print(resto%10)
     n = n * 10
     digitos+=1
     resto=resto//10
-print(resto % 10)
+numero_convertido = 0
+for i in range(digitos - 1, -1, -1):
+    cifra = numero // (10 ** i)
+    numero_convertido = numero_convertido  + (cifra * 10 ** ((digitos - 1) - i))
+    numero = numero % (10 ** i)
 
+print(numero_convertido)

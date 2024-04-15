@@ -12,22 +12,33 @@ Una empresa aplica el siguiente procedimiento en la comercialización de sus pro
 # Cantidad de ventas en las que se aplicó un 10% de descuento.
 #Cantidad de ventas en las que SOLO se aplicó el precio base, es decir que no se le realizaron descuentos."""
 
-cantidad=int(input("Cantidad solicitada de un producto"))
-precio_base=int(input("Ingrese el precio base del producto"))
-precio=cantidad * precio_base
+cantidad = 0
+precioBase = 0
+precioTotal = 0
+precioPromedio = 0
+cantVentas = 0
+cantVentas10 = 0
+cantVentas0 = 0
+while cantidad != -1:
+    cantidad = int(input("Ingrese una cantidad: "))
+    if cantidad != -1:
+        precioBase = int(input("Ingrese un precio base: "))
+        if cantidad <= 12:
+            precioTotal = precioBase * cantidad
+            cantVentas0 += 1
+        elif cantidad >= 13 and cantidad <= 100:
+            precioTotal = precioBase * 12 + (precioBase * 0.9) * (cantidad - 12)
+            cantVentas10 += 1
+        else:
+            precioTotal = precioBase * 12 + (precioBase * 0.9) * 88 + (precioBase * 0.75) * (cantidad - 100)
+        cantVentas += 1
+        precioPromedio = precioTotal / cantidad
+        print("Precio total: ", precioTotal)
+        print("Precio promedio: ", precioPromedio)
 
-
-
-cantidad_total_con_descuento_25=(cantidad-100) -(cantidad-12)
-venta_con_25_desc=((cantidad_total_con_descuento_25*precio_base)*0.25)+(cantidad_total_con_descuento_25*precio_base)
-
-cantidad_total_con_descuento_10=(cantidad_total_con_descuento_25-12)
-venta_con_10_desc=((cantidad_total_con_descuento_10*precio_base)*0.25)+(cantidad_total_con_descuento_10*precio_base)
-
-
-
-print("Cantidad de ventas realizadas con 10%descuento ",cantidad_total_con_descuento_10)
-print("Cantidad de ventas realizadas con 25%descuento ",cantidad_total_con_descuento_25)
+print("Cantidad de ventas realizadas total: ", cantVentas)
+print("Cantidad de ventas en las que se aplicó un 10% de descuento: ", cantVentas10)
+print("Cantidad de ventas en las que solo se aplicó el precio base, es decir que no se le realizaron descuentos: ", cantVentas0)
 
 
 

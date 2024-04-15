@@ -2,14 +2,16 @@
 informar si la cantidad de elementos es impar o par, sin utilizar contadores. Finalizar
 la lectura de datos con -1."""
 
-numero = int(input("Ingresa un numero"))
-cantidad_numeros=1
 while numero != -1:
-    cantidad_numeros += 1
-    numero = int(input("Ingresa un numero"))
-if cantidad_numeros%2==0:
-        print("cantidad par")
+    n=1
+    es_impar= not es_impar
+    numero = int(input("Leer numero entero"))
+if n==0:
+    print("no se ingresaron datos")
 else:
-        print("cantidad impar")
+    if es_impar:
+        print("La cantidad de numeros ingresados es impar")
+    else:
+        print("La cantidad de numeros ingresados es par")
 
 
