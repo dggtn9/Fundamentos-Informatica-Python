@@ -13,25 +13,25 @@ informe que contenga:
 · Salario promedio"""
 cantidadEmpleados = int(input("Ingrese la cantidad de empleados: "))
 gananMasDe200000 = 0
-gananMenosDe50000C3 = 0
+gananMenosDe50000cc = 0
 sueldoMasBajo = 0
 promedioSueldos = 0
-sueldoTotalCategoria1 = 0
-sueldoTotalCategoria2 = 0
-sueldoTotalCategoria3 = 0
+sueldoTotalCategoriaa = 0
+sueldoTotalCategoriab = 0
+sueldoTotalCategoriac = 0
 sueldoTotal = 0
 legajoMasGana = 0
 
 for i in range(cantidadEmpleados):
       legajo = int(input("Ingrese el legajo del empleado: "))
-      categoria = int(input("Ingrese la categoria del empleado: "))
+      categoria = input("Ingrese la categoria del empleado: ")
       salario = int(input("Ingrese el salario del empleado: "))
       sueldoTotal += salario
 
       if salario > 200000:
             gananMasDe200000 += 1
-      if salario < 50000 and categoria == 3:
-            gananMenosDe50000C3 += 1
+      if salario < 50000 and categoria == "C":
+            gananMenosDe50000cc += 1
       if i == 0:
             sueldoMasBajo = salario
             legajoMasGana = legajo
@@ -40,24 +40,24 @@ for i in range(cantidadEmpleados):
                   sueldoMasBajo = salario
             if salario > sueldoMasBajo:
                   legajoMasGana = legajo
-      if categoria == 1:
-            sueldoTotalCategoria1 += salario
-      if categoria == 2:
-            sueldoTotalCategoria2 += salario
-      if categoria == 3:
-            sueldoTotalCategoria3 += salario
+      if categoria == "A":
+            sueldoTotalCategoriaa += salario
+      if categoria == "B":
+            sueldoTotalCategoriab += salario
+      if categoria == "C":
+            sueldoTotalCategoriac += salario
 
 promedioSueldos = sueldoTotal / cantidadEmpleados
 
 print("El importe total de salarios pagados por la empresa es: ", sueldoTotal)
 print("La cantidad de empleados que ganan mas de $200000 es: ", gananMasDe200000)
-print("La cantidad de empleados que ganan menos de $50000 y cuya categoria es 3 es: ", gananMenosDe50000C3)
+print("La cantidad de empleados que ganan menos de $50000 y cuya categoria es 3 es: ", gananMenosDe50000cc)
 print("El legajo del empleado que mas gana es: ", legajoMasGana)
 print("El sueldo mas bajo es: ", sueldoMasBajo)
 print("El importe total de sueldos por cada categoria es: ")
-print("Categoria 1: ", sueldoTotalCategoria1)
-print("Categoria 2: ", sueldoTotalCategoria2)
-print("Categoria 3: ", sueldoTotalCategoria3)
+print("Categoria 1: ", sueldoTotalCategoriaa)
+print("Categoria 2: ", sueldoTotalCategoriab)
+print("Categoria 3: ", sueldoTotalCategoriac)
 print("El salario promedio es: ", promedioSueldos)
 
 
