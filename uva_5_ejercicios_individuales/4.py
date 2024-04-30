@@ -4,3 +4,5 @@
   20 deberá abonar una multa de $150 o del 10% de su factura, lo que resulte mayor. Escriba un algoritmo que lea el número del
 cliente y el total de la factura,
 y emita un informe donde conste el número del cliente y los tres importes que podrá abonar según la fecha de pago.  """
+
+
